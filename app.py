@@ -194,7 +194,8 @@ if cluster_selected:
     st.success(f"Cluster {cluster} — {info['name']}")
     col1,col2 = st.columns([1,3])
     with col1:
-        st.image(info["image"], caption=f"Cluster {cluster} Visualization", use_container_width=True)
+        image_path = os.path.join("images", f"cluster{cluster}.png")
+        st.image(image_path, caption=f"Cluster {cluster} Visualization", use_container_width=True)
     with col2:
         st.write(info["desc"])
 
