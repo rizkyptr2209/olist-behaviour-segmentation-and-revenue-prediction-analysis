@@ -27,7 +27,7 @@ cluster_info = {
             "Fun incentives like double points if you return soon",
             "‘Welcome back’ offers that make trying again easy"
         ],
-        "image": "images\LV-removebg-preview.png"
+        "image": "./images/LV-removebg-preview.png"
     },
     1: {
         "name": "One-Time High Spenders",
@@ -39,7 +39,7 @@ cluster_info = {
             "Friendly reminders for product upgrades or refills",
             "VIP-style communication and offers for premium buyers"
         ],
-        "image": "images\OHS-removebg-preview.png"
+        "image": "./images/OHS-removebg-preview.png"
     },
     2: {
         "name": "Engaged Regulars",
@@ -51,7 +51,7 @@ cluster_info = {
             "Invitations to product previews or community events",
             "Special referral bonuses for bringing in friends"
         ],
-        "image": "images\ER-removebg-preview.png"
+        "image": "./images/ER-removebg-preview.png"
     },
     3: {
         "name": "VIP Customers",
@@ -63,7 +63,7 @@ cluster_info = {
             "Special VIP-only promotions and experiences",
             "Personalized suggestions to enhance your shopping"
         ],
-        "image": "images\VIP-removebg-preview.png"
+        "image": "./images/VIP-removebg-preview.png"
     },
     4: {
         "name": "Moderate Spenders",
@@ -75,7 +75,7 @@ cluster_info = {
             "Gamified shopping perks to make buying more fun",
             "Bonus points or discounts to encourage more purchases"
         ],
-        "image": "images\MS-removebg-preview.png"
+        "image": "./images/MS-removebg-preview.png"
     }
 }
 
@@ -194,8 +194,7 @@ if cluster_selected:
     st.success(f"Cluster {cluster} — {info['name']}")
     col1,col2 = st.columns([1,3])
     with col1:
-        image_path = os.path.join("images", f"cluster{cluster}.png")
-        st.image(image_path, caption=f"Cluster {cluster} Visualization", use_container_width=True)
+        st.image(info["image"], caption=f"Cluster {cluster} Visualization", use_container_width=True)
     with col2:
         st.write(info["desc"])
 
